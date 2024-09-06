@@ -24,12 +24,12 @@ export async function generateStaticParams() {
 
   return pages.docs
     ?.filter((doc) => {
-      return doc.slug !== 'home'
+      return doc.slug !== 'warum-vegan'
     })
     .map(({ slug }) => slug)
 }
 
-export default async function Page({ params: { slug = 'home' } }) {
+export default async function Page({ params: { slug = 'warum-vegan' } }) {
   const url = '/' + slug
 
   let page: PageType | null
